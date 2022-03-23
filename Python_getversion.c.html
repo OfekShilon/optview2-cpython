@@ -1,0 +1,80 @@
+
+<html>
+<meta charset="utf-8" />
+<head>
+<title>getversion.c</title>
+<link rel="icon" type="image/png" href="assets/favicon.ico"/>
+<link rel='stylesheet' type='text/css' href='assets/style.css'>
+<link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css'>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<h1 class="filename-title">/home/ofek/src/cpython/Python/getversion.c</h1>
+<h3>1 issue types:</h3>
+<ul id='entries_summary'>
+<li>inline: 3
+</ul>
+<p><a class='back' href='index.html'>Back</a></p>
+<table id="opt_table_code" class="" width="100%"></table>
+<p><a class='back' href='index.html'>Back</a></p>
+
+<script type="text/javascript">
+var dataSet = [["<a name=\"L1\">1</a>", "", "", "<div class=\"highlight\"><pre><span></span></pre></div>", ""], ["<a name=\"L2\">2</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cm\">/* Return the full version string. */</span></pre></div>", ""], ["<a name=\"L3\">3</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L4\">4</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#include</span> <span class=\"cpf\">&quot;Python.h&quot;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L5\">5</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L6\">6</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#include</span> <span class=\"cpf\">&quot;patchlevel.h&quot;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L7\">7</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L8\">8</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span></pre></div>", ""], ["<a name=\"L9\">9</a>", "", "", "<div class=\"highlight\"><pre><span class=\"nf\">Py_GetVersion</span><span class=\"p\">(</span><span class=\"kt\">void</span><span class=\"p\">)</span></pre></div>", ""], ["<a name=\"L10\">10</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L11\">11</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">static</span> <span class=\"kt\">char</span> <span class=\"n\">version</span><span class=\"p\">[</span><span class=\"mi\">250</span><span class=\"p\">];</span></pre></div>", ""], ["<a name=\"L12\">12</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"n\">PyOS_snprintf</span><span class=\"p\">(</span><span class=\"n\">version</span><span class=\"p\">,</span> <span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">version</span><span class=\"p\">),</span> <span class=\"s\">&quot;%.80s (%.80s) %.80s&quot;</span><span class=\"p\">,</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_pyerrors.h.html#L0\">PyOS_snprintf</a> will not be inlined into Py_GetVersion because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "Py_GetVersion"}], ["<a name=\"L13\">13</a>", "", "", "<div class=\"highlight\"><pre>                  <span class=\"n\">PY_VERSION</span><span class=\"p\">,</span> <span class=\"n\">Py_GetBuildInfo</span><span class=\"p\">(),</span> <span class=\"n\">Py_GetCompiler</span><span class=\"p\">());</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 20ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_pylifecycle.h.html#L0\">Py_GetBuildInfo</a> will not be inlined into Py_GetVersion because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "Py_GetVersion"}], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 20ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_pylifecycle.h.html#L0\">Py_GetCompiler</a> will not be inlined into Py_GetVersion because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "Py_GetVersion"}], ["<a name=\"L14\">14</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">return</span> <span class=\"n\">version</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L15\">15</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L16\">16</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L17\">17</a>", "", "", "<div class=\"highlight\"><pre><span class=\"c1\">// Export the Python hex version as a constant.</span></pre></div>", ""], ["<a name=\"L18\">18</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">const</span> <span class=\"kt\">unsigned</span> <span class=\"kt\">long</span> <span class=\"n\">Py_Version</span> <span class=\"o\">=</span> <span class=\"n\">PY_VERSION_HEX</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L19\">19</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L20\">20</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""]];
+
+function toggleExpandedMessage(e) {
+  var FullTextElems = e.parentElement.parentElement.getElementsByClassName("full-info");
+  if (!FullTextElems || FullTextElems.length < 1) {
+      return false;
+  }
+  var FullText = FullTextElems[0];
+  if (FullText.style.display == 'none') {
+    e.innerHTML = '-';
+    FullText.style.display = 'block';
+  } else {
+    e.innerHTML = '+';
+    FullText.style.display = 'none';
+  }
+}
+
+$(document).ready(function() {
+    $('#opt_table_code').DataTable( {
+        data: dataSet,
+        paging: false,
+        "ordering": false,
+        "asStripeClasses": [],
+        columns: [
+            { title: "Line" },
+            { title: "Hotness" },
+            { title: "Optimization" },
+            { title: "Source" },
+            { title: "Inline Context" }
+        ],
+        columnDefs: [
+            {
+                "targets": "_all",
+                "createdCell": function (td, data, rowData, row, col) {
+                    if (data.constructor == Object && data['class'] !== undefined) {
+                        $(td).addClass(data['class']);
+                    }
+                },
+                "render": function(data, type, row) {
+                    if (data.constructor == Object && data['text'] !== undefined) {
+                        return data['text'];
+                    }
+                    return data;
+                }
+            }
+        ]
+    } );
+    if (location.hash.length > 2) {
+        var loc = location.hash.split("#")[1];
+        var aTag = $("a[name='" + loc + "']");
+        if (aTag.length > 0) {
+            $('body').scrollTop(parseInt(aTag.offset().top));
+        }
+    }
+} );
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<html>
+<meta charset="utf-8" />
+<head>
+<title>_xxtestfuzz.c</title>
+<link rel="icon" type="image/png" href="assets/favicon.ico"/>
+<link rel='stylesheet' type='text/css' href='assets/style.css'>
+<link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css'>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<h1 class="filename-title">/home/ofek/src/cpython/Modules/_xxtestfuzz/_xxtestfuzz.c</h1>
+<h3>2 issue types:</h3>
+<ul id='entries_summary'>
+<li>inline: 5
+<li>gvn: 3
+</ul>
+<p><a class='back' href='index.html'>Back</a></p>
+<table id="opt_table_code" class="" width="100%"></table>
+<p><a class='back' href='index.html'>Back</a></p>
+
+<script type="text/javascript">
+var dataSet = [["<a name=\"L1\">1</a>", "", "", "<div class=\"highlight\"><pre><span></span><span class=\"cp\">#define PY_SSIZE_T_CLEAN</span></pre></div>", ""], ["<a name=\"L2\">2</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#include</span> <span class=\"cpf\">&lt;Python.h&gt;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L3\">3</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#include</span> <span class=\"cpf\">&lt;stdlib.h&gt;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L4\">4</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#include</span> <span class=\"cpf\">&lt;inttypes.h&gt;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L5\">5</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L6\">6</a>", "", "", "<div class=\"highlight\"><pre><span class=\"kt\">int</span> <span class=\"nf\">LLVMFuzzerTestOneInput</span><span class=\"p\">(</span><span class=\"k\">const</span> <span class=\"kt\">uint8_t</span> <span class=\"o\">*</span><span class=\"n\">data</span><span class=\"p\">,</span> <span class=\"kt\">size_t</span> <span class=\"n\">size</span><span class=\"p\">);</span></pre></div>", ""], ["<a name=\"L7\">7</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L8\">8</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">static</span> <span class=\"n\">PyObject</span><span class=\"o\">*</span> <span class=\"nf\">_fuzz_run</span><span class=\"p\">(</span><span class=\"n\">PyObject</span><span class=\"o\">*</span> <span class=\"n\">self</span><span class=\"p\">,</span> <span class=\"n\">PyObject</span><span class=\"o\">*</span> <span class=\"n\">args</span><span class=\"p\">)</span> <span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L9\">9</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">const</span> <span class=\"kt\">char</span><span class=\"o\">*</span> <span class=\"n\">buf</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L10\">10</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"n\">Py_ssize_t</span> <span class=\"n\">size</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L11\">11</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"o\">!</span><span class=\"n\">PyArg_ParseTuple</span><span class=\"p\">(</span><span class=\"n\">args</span><span class=\"p\">,</span> <span class=\"s\">&quot;s#&quot;</span><span class=\"p\">,</span> <span class=\"o\">&amp;</span><span class=\"n\">buf</span><span class=\"p\">,</span> <span class=\"o\">&amp;</span><span class=\"n\">size</span><span class=\"p\">))</span> <span class=\"p\">{</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  _PyArg_ParseTuple_SizeT will not be inlined into _fuzz_run because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["<a name=\"L12\">12</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"k\">return</span> <span class=\"nb\">NULL</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L13\">13</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L14\">14</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"kt\">int</span> <span class=\"n\">rv</span> <span class=\"o\">=</span> <span class=\"n\">LLVMFuzzerTestOneInput</span><span class=\"p\">((</span><span class=\"k\">const</span> <span class=\"kt\">uint8_t</span><span class=\"o\">*</span><span class=\"p\">)</span><span class=\"n\">buf</span><span class=\"p\">,</span> <span class=\"n\">size</span><span class=\"p\">);</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  <a href=\"Modules__xxtestfuzz__xxtestfuzz.c.html#L0\">LLVMFuzzerTestOneInput</a> will not be inlined into _fuzz_run because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["", "0.00%", {"class": "column-entry-red", "text": "gvn"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  load of type i8* not eliminated because it is clobbered by <a href=\"Modules__xxtestfuzz__xxtestfuzz.c.html#L11\">call</a>&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["", "0.00%", {"class": "column-entry-red", "text": "gvn"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  load of type i64 not eliminated because it is clobbered by <a href=\"Modules__xxtestfuzz__xxtestfuzz.c.html#L11\">call</a>&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["<a name=\"L15\">15</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"n\">PyErr_Occurred</span><span class=\"p\">())</span> <span class=\"p\">{</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_pyerrors.h.html#L0\">PyErr_Occurred</a> will not be inlined into _fuzz_run because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["<a name=\"L16\">16</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"k\">return</span> <span class=\"nb\">NULL</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L17\">17</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L18\">18</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"n\">rv</span> <span class=\"o\">!=</span> <span class=\"mi\">0</span><span class=\"p\">)</span> <span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L19\">19</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"c1\">// Nonzero return codes are reserved for future use.</span></pre></div>", ""], ["<a name=\"L20\">20</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"n\">PyErr_Format</span><span class=\"p\">(</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 10ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_pyerrors.h.html#L0\">PyErr_Format</a> will not be inlined into _fuzz_run because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["<a name=\"L21\">21</a>", "", "", "<div class=\"highlight\"><pre>            <span class=\"n\">PyExc_RuntimeError</span><span class=\"p\">,</span> <span class=\"s\">&quot;Nonzero return code from fuzzer: %d&quot;</span><span class=\"p\">,</span> <span class=\"n\">rv</span><span class=\"p\">);</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "gvn"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 14ch;\" class=\"indent-span\">&bull;  load of type %struct._object* not eliminated because it is clobbered by <a href=\"Modules__xxtestfuzz__xxtestfuzz.c.html#L15\">call</a>&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "_fuzz_run"}], ["<a name=\"L22\">22</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"k\">return</span> <span class=\"nb\">NULL</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L23\">23</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L24\">24</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"n\">Py_RETURN_NONE</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L25\">25</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L26\">26</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L27\">27</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">static</span> <span class=\"n\">PyMethodDef</span> <span class=\"n\">module_methods</span><span class=\"p\">[]</span> <span class=\"o\">=</span> <span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L28\">28</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"p\">{</span><span class=\"s\">&quot;run&quot;</span><span class=\"p\">,</span> <span class=\"p\">(</span><span class=\"n\">PyCFunction</span><span class=\"p\">)</span><span class=\"n\">_fuzz_run</span><span class=\"p\">,</span> <span class=\"n\">METH_VARARGS</span><span class=\"p\">,</span> <span class=\"s\">&quot;&quot;</span><span class=\"p\">},</span></pre></div>", ""], ["<a name=\"L29\">29</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"p\">{</span><span class=\"nb\">NULL</span><span class=\"p\">},</span></pre></div>", ""], ["<a name=\"L30\">30</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">};</span></pre></div>", ""], ["<a name=\"L31\">31</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L32\">32</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">static</span> <span class=\"k\">struct</span> <span class=\"n\">PyModuleDef</span> <span class=\"n\">_fuzzmodule</span> <span class=\"o\">=</span> <span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L33\">33</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"n\">PyModuleDef_HEAD_INIT</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L34\">34</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"s\">&quot;_fuzz&quot;</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L35\">35</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"nb\">NULL</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L36\">36</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"mi\">0</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L37\">37</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"n\">module_methods</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L38\">38</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"nb\">NULL</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L39\">39</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"nb\">NULL</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L40\">40</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"nb\">NULL</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L41\">41</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"nb\">NULL</span></pre></div>", ""], ["<a name=\"L42\">42</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">};</span></pre></div>", ""], ["<a name=\"L43\">43</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L44\">44</a>", "", "", "<div class=\"highlight\"><pre><span class=\"n\">PyMODINIT_FUNC</span></pre></div>", ""], ["<a name=\"L45\">45</a>", "", "", "<div class=\"highlight\"><pre><span class=\"nf\">PyInit__xxtestfuzz</span><span class=\"p\">(</span><span class=\"kt\">void</span><span class=\"p\">)</span></pre></div>", ""], ["<a name=\"L46\">46</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L47\">47</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">return</span> <span class=\"n\">PyModule_Create</span><span class=\"p\">(</span><span class=\"o\">&amp;</span><span class=\"n\">_fuzzmodule</span><span class=\"p\">);</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_modsupport.h.html#L0\">PyModule_Create2</a> will not be inlined into PyInit__xxtestfuzz because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "PyInit__xxtestfuzz"}], ["<a name=\"L48\">48</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L49\">49</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L50\">50</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""]];
+
+function toggleExpandedMessage(e) {
+  var FullTextElems = e.parentElement.parentElement.getElementsByClassName("full-info");
+  if (!FullTextElems || FullTextElems.length < 1) {
+      return false;
+  }
+  var FullText = FullTextElems[0];
+  if (FullText.style.display == 'none') {
+    e.innerHTML = '-';
+    FullText.style.display = 'block';
+  } else {
+    e.innerHTML = '+';
+    FullText.style.display = 'none';
+  }
+}
+
+$(document).ready(function() {
+    $('#opt_table_code').DataTable( {
+        data: dataSet,
+        paging: false,
+        "ordering": false,
+        "asStripeClasses": [],
+        columns: [
+            { title: "Line" },
+            { title: "Hotness" },
+            { title: "Optimization" },
+            { title: "Source" },
+            { title: "Inline Context" }
+        ],
+        columnDefs: [
+            {
+                "targets": "_all",
+                "createdCell": function (td, data, rowData, row, col) {
+                    if (data.constructor == Object && data['class'] !== undefined) {
+                        $(td).addClass(data['class']);
+                    }
+                },
+                "render": function(data, type, row) {
+                    if (data.constructor == Object && data['text'] !== undefined) {
+                        return data['text'];
+                    }
+                    return data;
+                }
+            }
+        ]
+    } );
+    if (location.hash.length > 2) {
+        var loc = location.hash.split("#")[1];
+        var aTag = $("a[name='" + loc + "']");
+        if (aTag.length > 0) {
+            $('body').scrollTop(parseInt(aTag.offset().top));
+        }
+    }
+} );
+</script>
+</body>
+</html>
