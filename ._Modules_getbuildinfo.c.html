@@ -1,0 +1,80 @@
+
+<html>
+<meta charset="utf-8" />
+<head>
+<title>getbuildinfo.c</title>
+<link rel="icon" type="image/png" href="assets/favicon.ico"/>
+<link rel='stylesheet' type='text/css' href='assets/style.css'>
+<link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css'>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<h1 class="filename-title">/home/ofek/src/cpython/Modules/getbuildinfo.c</h1>
+<h3>1 issue types:</h3>
+<ul id='entries_summary'>
+<li>inline: 1
+</ul>
+<p><a class='back' href='index.html'>Back</a></p>
+<table id="opt_table_code" class="" width="100%"></table>
+<p><a class='back' href='index.html'>Back</a></p>
+
+<script type="text/javascript">
+var dataSet = [["<a name=\"L1\">1</a>", "", "", "<div class=\"highlight\"><pre><span></span><span class=\"cp\">#include</span> <span class=\"cpf\">&quot;Python.h&quot;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L2\">2</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L3\">3</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifndef DONT_HAVE_STDIO_H</span></pre></div>", ""], ["<a name=\"L4\">4</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#include</span> <span class=\"cpf\">&lt;stdio.h&gt;</span><span class=\"cp\"></span></pre></div>", ""], ["<a name=\"L5\">5</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L6\">6</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L7\">7</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifndef DATE</span></pre></div>", ""], ["<a name=\"L8\">8</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifdef __DATE__</span></pre></div>", ""], ["<a name=\"L9\">9</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define DATE __DATE__</span></pre></div>", ""], ["<a name=\"L10\">10</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#else</span></pre></div>", ""], ["<a name=\"L11\">11</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define DATE &quot;xx/xx/xx&quot;</span></pre></div>", ""], ["<a name=\"L12\">12</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L13\">13</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L14\">14</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L15\">15</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifndef TIME</span></pre></div>", ""], ["<a name=\"L16\">16</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifdef __TIME__</span></pre></div>", ""], ["<a name=\"L17\">17</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define TIME __TIME__</span></pre></div>", ""], ["<a name=\"L18\">18</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#else</span></pre></div>", ""], ["<a name=\"L19\">19</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define TIME &quot;xx:xx:xx&quot;</span></pre></div>", ""], ["<a name=\"L20\">20</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L21\">21</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L22\">22</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L23\">23</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cm\">/* XXX Only unix build process has been tested */</span></pre></div>", ""], ["<a name=\"L24\">24</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifndef GITVERSION</span></pre></div>", ""], ["<a name=\"L25\">25</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define GITVERSION &quot;&quot;</span></pre></div>", ""], ["<a name=\"L26\">26</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L27\">27</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifndef GITTAG</span></pre></div>", ""], ["<a name=\"L28\">28</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define GITTAG &quot;&quot;</span></pre></div>", ""], ["<a name=\"L29\">29</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L30\">30</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#ifndef GITBRANCH</span></pre></div>", ""], ["<a name=\"L31\">31</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#define GITBRANCH &quot;&quot;</span></pre></div>", ""], ["<a name=\"L32\">32</a>", "", "", "<div class=\"highlight\"><pre><span class=\"cp\">#endif</span></pre></div>", ""], ["<a name=\"L33\">33</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L34\">34</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span></pre></div>", ""], ["<a name=\"L35\">35</a>", "", "", "<div class=\"highlight\"><pre><span class=\"nf\">Py_GetBuildInfo</span><span class=\"p\">(</span><span class=\"kt\">void</span><span class=\"p\">)</span></pre></div>", ""], ["<a name=\"L36\">36</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L37\">37</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">static</span> <span class=\"kt\">char</span> <span class=\"n\">buildinfo</span><span class=\"p\">[</span><span class=\"mi\">50</span> <span class=\"o\">+</span> <span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">GITVERSION</span><span class=\"p\">)</span> <span class=\"o\">+</span></pre></div>", ""], ["<a name=\"L38\">38</a>", "", "", "<div class=\"highlight\"><pre>                          <span class=\"p\">((</span><span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">GITTAG</span><span class=\"p\">)</span> <span class=\"o\">&gt;</span> <span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">GITBRANCH</span><span class=\"p\">))</span> <span class=\"o\">?</span></pre></div>", ""], ["<a name=\"L39\">39</a>", "", "", "<div class=\"highlight\"><pre>                           <span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">GITTAG</span><span class=\"p\">)</span> <span class=\"o\">:</span> <span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">GITBRANCH</span><span class=\"p\">))];</span></pre></div>", ""], ["<a name=\"L40\">40</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span><span class=\"n\">revision</span> <span class=\"o\">=</span> <span class=\"n\">_Py_gitversion</span><span class=\"p\">();</span></pre></div>", ""], ["<a name=\"L41\">41</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span><span class=\"n\">sep</span> <span class=\"o\">=</span> <span class=\"o\">*</span><span class=\"n\">revision</span> <span class=\"o\">?</span> <span class=\"s\">&quot;:&quot;</span> <span class=\"o\">:</span> <span class=\"s\">&quot;&quot;</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L42\">42</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span><span class=\"n\">gitid</span> <span class=\"o\">=</span> <span class=\"n\">_Py_gitidentifier</span><span class=\"p\">();</span></pre></div>", ""], ["<a name=\"L43\">43</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">if</span> <span class=\"p\">(</span><span class=\"o\">!</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">gitid</span><span class=\"p\">))</span> <span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L44\">44</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"n\">gitid</span> <span class=\"o\">=</span> <span class=\"s\">&quot;main&quot;</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L45\">45</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L46\">46</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"n\">PyOS_snprintf</span><span class=\"p\">(</span><span class=\"n\">buildinfo</span><span class=\"p\">,</span> <span class=\"k\">sizeof</span><span class=\"p\">(</span><span class=\"n\">buildinfo</span><span class=\"p\">),</span></pre></div>", ""], ["", "0.00%", {"class": "column-entry-red", "text": "inline"}, {"class": "column-entry-yellow", "text": "<span style=\"margin-left: 6ch;\" class=\"indent-span\">&bull;  <a href=\"._Include_pyerrors.h.html#L0\">PyOS_snprintf</a> will not be inlined into Py_GetBuildInfo because its definition is unavailable&nbsp;</span>"}, {"class": "column-entry-yellow", "text": "Py_GetBuildInfo"}], ["<a name=\"L47\">47</a>", "", "", "<div class=\"highlight\"><pre>                  <span class=\"s\">&quot;%s%s%s, %.20s, %.9s&quot;</span><span class=\"p\">,</span> <span class=\"n\">gitid</span><span class=\"p\">,</span> <span class=\"n\">sep</span><span class=\"p\">,</span> <span class=\"n\">revision</span><span class=\"p\">,</span></pre></div>", ""], ["<a name=\"L48\">48</a>", "", "", "<div class=\"highlight\"><pre>                  <span class=\"n\">DATE</span><span class=\"p\">,</span> <span class=\"n\">TIME</span><span class=\"p\">);</span></pre></div>", ""], ["<a name=\"L49\">49</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">return</span> <span class=\"n\">buildinfo</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L50\">50</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L51\">51</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L52\">52</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span></pre></div>", ""], ["<a name=\"L53\">53</a>", "", "", "<div class=\"highlight\"><pre><span class=\"nf\">_Py_gitversion</span><span class=\"p\">(</span><span class=\"kt\">void</span><span class=\"p\">)</span></pre></div>", ""], ["<a name=\"L54\">54</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L55\">55</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">return</span> <span class=\"n\">GITVERSION</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L56\">56</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L57\">57</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L58\">58</a>", "", "", "<div class=\"highlight\"><pre><span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span></pre></div>", ""], ["<a name=\"L59\">59</a>", "", "", "<div class=\"highlight\"><pre><span class=\"nf\">_Py_gitidentifier</span><span class=\"p\">(</span><span class=\"kt\">void</span><span class=\"p\">)</span></pre></div>", ""], ["<a name=\"L60\">60</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">{</span></pre></div>", ""], ["<a name=\"L61\">61</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">const</span> <span class=\"kt\">char</span> <span class=\"o\">*</span><span class=\"n\">gittag</span><span class=\"p\">,</span> <span class=\"o\">*</span><span class=\"n\">gitid</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L62\">62</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"n\">gittag</span> <span class=\"o\">=</span> <span class=\"n\">GITTAG</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L63\">63</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">if</span> <span class=\"p\">((</span><span class=\"o\">*</span><span class=\"n\">gittag</span><span class=\"p\">)</span> <span class=\"o\">&amp;&amp;</span> <span class=\"n\">strcmp</span><span class=\"p\">(</span><span class=\"n\">gittag</span><span class=\"p\">,</span> <span class=\"s\">&quot;undefined&quot;</span><span class=\"p\">)</span> <span class=\"o\">!=</span> <span class=\"mi\">0</span><span class=\"p\">)</span></pre></div>", ""], ["<a name=\"L64\">64</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"n\">gitid</span> <span class=\"o\">=</span> <span class=\"n\">gittag</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L65\">65</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">else</span></pre></div>", ""], ["<a name=\"L66\">66</a>", "", "", "<div class=\"highlight\"><pre>        <span class=\"n\">gitid</span> <span class=\"o\">=</span> <span class=\"n\">GITBRANCH</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L67\">67</a>", "", "", "<div class=\"highlight\"><pre>    <span class=\"k\">return</span> <span class=\"n\">gitid</span><span class=\"p\">;</span></pre></div>", ""], ["<a name=\"L68\">68</a>", "", "", "<div class=\"highlight\"><pre><span class=\"p\">}</span></pre></div>", ""], ["<a name=\"L69\">69</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""], ["<a name=\"L70\">70</a>", "", "", "<div class=\"highlight\"><pre></pre></div>", ""]];
+
+function toggleExpandedMessage(e) {
+  var FullTextElems = e.parentElement.parentElement.getElementsByClassName("full-info");
+  if (!FullTextElems || FullTextElems.length < 1) {
+      return false;
+  }
+  var FullText = FullTextElems[0];
+  if (FullText.style.display == 'none') {
+    e.innerHTML = '-';
+    FullText.style.display = 'block';
+  } else {
+    e.innerHTML = '+';
+    FullText.style.display = 'none';
+  }
+}
+
+$(document).ready(function() {
+    $('#opt_table_code').DataTable( {
+        data: dataSet,
+        paging: false,
+        "ordering": false,
+        "asStripeClasses": [],
+        columns: [
+            { title: "Line" },
+            { title: "Hotness" },
+            { title: "Optimization" },
+            { title: "Source" },
+            { title: "Inline Context" }
+        ],
+        columnDefs: [
+            {
+                "targets": "_all",
+                "createdCell": function (td, data, rowData, row, col) {
+                    if (data.constructor == Object && data['class'] !== undefined) {
+                        $(td).addClass(data['class']);
+                    }
+                },
+                "render": function(data, type, row) {
+                    if (data.constructor == Object && data['text'] !== undefined) {
+                        return data['text'];
+                    }
+                    return data;
+                }
+            }
+        ]
+    } );
+    if (location.hash.length > 2) {
+        var loc = location.hash.split("#")[1];
+        var aTag = $("a[name='" + loc + "']");
+        if (aTag.length > 0) {
+            $('body').scrollTop(parseInt(aTag.offset().top));
+        }
+    }
+} );
+</script>
+</body>
+</html>
