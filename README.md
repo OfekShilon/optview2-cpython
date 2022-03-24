@@ -1,5 +1,6 @@
 # optview2-cpython
-Results of OptView2 analysis on the CPython repo
+Results of OptView2 analysis on CPython.
+The c++ compiler used was clang10, the CPython repo was cloned on March 24st 2022.
 
 View as html via: https://ofekshilon.github.io/optview2-cpython/
 
