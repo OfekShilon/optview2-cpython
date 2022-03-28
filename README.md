@@ -1,6 +1,6 @@
 # optview2-cpython
 Results of OptView2 analysis on CPython.
-The c++ compiler used was clang10, the CPython repo was cloned on March 24st 2022.
+The c++ compiler used was clang12, the CPython repo was cloned on March 28st 2022.
 
 View as html via: https://ofekshilon.github.io/optview2-cpython/
 
@@ -14,10 +14,13 @@ $ cd cpython
 $ # You might need to `sudo apt-get build-dep python3` if you're missing needed packages. More info at https://devguide.python.org/setup/#install-dependencies
 $ export CC=clang
 $ export CFLAGS="-fsave-optimization-record -fdiagnostics-show-hotness"
-$ ./configure  --enable-optimizations --prefix=<your folder of choice>   # This enables pgo and lto
+$ ./configure  --enable-optimizations # This enables pgo and lto
 $ make
-$ make install  # Puts the cpython bin into into --prefix folder, eg for profiling. Not necessary for the html creation, 
 $ ../optview2/opt-viewer.py -j10 --output-dir <your htmls folder> --source-dir . .
+
+# To actually install and use the built CPython you'd probably want to -
+$ ./configure  --enable-optimizations  --prefix=<your folder of choice>  
+$ make install    # deploy to the --prefix folder
 ```
 
 Feel free to roam around and investigate.
