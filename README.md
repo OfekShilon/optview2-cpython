@@ -12,9 +12,10 @@ $ git clone git@github.com:OfekShilon/optview2.git
 $ # If you didn't setup ssh on github, replace `git@` with `https://`
 $ cd cpython
 $ # You might need to `sudo apt-get build-dep python3` if you're missing needed packages. More info at https://devguide.python.org/setup/#install-dependencies
-$ export CC=clang
+$ export CC=clang-12
 $ export CFLAGS="-fsave-optimization-record -fdiagnostics-show-hotness"
-$ ./configure  --enable-optimizations # This enables pgo and lto
+$ ./configure LLVM_PROFDATA=/<PATH TO>/llvm-profdata --enable-optimizations # This enables pgo and lto. 
+#                          # Hopefully the LLVM_PROFDATA hack won't be needed forever: https://bugs.python.org/issue47140
 $ make
 $ ../optview2/opt-viewer.py -j10 --output-dir <your htmls folder> --source-dir . .
 
