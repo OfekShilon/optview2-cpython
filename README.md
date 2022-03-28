@@ -18,7 +18,7 @@ $ export CC=clang-12
 $ export CFLAGS="-fsave-optimization-record -fdiagnostics-show-hotness"
 $ ./configure LLVM_PROFDATA=/<PATH TO>/llvm-profdata --enable-optimizations # This enables pgo and lto. 
 #                          # Hopefully the LLVM_PROFDATA hack won't be needed forever: https://bugs.python.org/issue47140
-$ make
+$ make -j10
 $ ../optview2/opt-viewer.py -j10 --output-dir <your htmls folder> --source-dir . .
 
 # To actually install and use the built CPython you'd probably want to -
