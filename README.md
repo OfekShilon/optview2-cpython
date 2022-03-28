@@ -4,6 +4,8 @@ The c++ compiler used was clang12, the CPython repo was cloned on March 28st 202
 
 View as html via: https://ofekshilon.github.io/optview2-cpython/
 
+This repo demonstrates OptView2 usage of PGO hotness data.
+
 Exact steps used for htmls creation, on Ubuntu 20:
 
 ```bash
